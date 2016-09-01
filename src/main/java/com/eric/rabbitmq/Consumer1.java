@@ -69,13 +69,14 @@ public class Consumer1 implements Runnable,Consumer {
 
 	private void doWork(String message) {
 		for (char ch : message.toCharArray()) {
-			if (ch == '.')
+			if (ch == '.') {
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+			}
 		}
 		
 	}
